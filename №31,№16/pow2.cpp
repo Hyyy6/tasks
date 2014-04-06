@@ -3,20 +3,19 @@
 
 
 
-double pow2(double x, int n, bool*m)
+double pow2(double x, int n)
 {
-	int s = 0;
-
+	int negative_number = 0;
 
 	if (n < 0)
 	{
 		n = abs(n);
-		s = 1;
+		negative_number = 1;
 	}
 
 	double x_n = 0, x1;
 	int j, k = 2;
-	bool*arr = n_2(n, m);
+	bool*arr = n_2(n);
 
 	int i = 31;
 
@@ -37,16 +36,17 @@ double pow2(double x, int n, bool*m)
 		x1 = x;
 
 		for (j = 0; j < i; j++)
-			x1 = x1*x1;
+			x1 = x1 * x1;
 
 		for (j = 1; j < i; j++)
 			k = k * 2;
 
-		x_n = x1 * pow2(x, n - k, m);
+		x_n = x1 * pow2(x, n - k);
 	}
 
-	if (s == 1)
+	if (negative_number == 1)
 		x_n = 1 / x_n;
 
 	return x_n;
+
 }

@@ -1,12 +1,13 @@
 #include "stdafx.h"
 
 
-bool* n_2(int n, bool*m)
+bool* n_2(int n)
 {
 
-
-	/*bool* m = (bool*)malloc(32 * sizeof(bool));*/
 	int i = 0, a;
+	bool*m = (bool*)malloc(32 * sizeof(bool));
+	if (m == NULL)
+		return 0;
 	memset(m, 0, 32 * sizeof(bool));
 
 	a = n;
@@ -34,4 +35,5 @@ bool* n_2(int n, bool*m)
 	}
 
 	return m;
+
 }
