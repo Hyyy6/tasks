@@ -129,7 +129,7 @@ int rat_to_i(Rational *a) /* округление до ближ. целого */
 
 double rat_to_d(Rational *a) /* преобразование в число с плав. точкой */
 {
-	double d = double(a->numer) / double(a->denom);
+	double d = double(a->numer) / double(a->denom); // [SF] Опять какая-то фигня со скобками:)
 
 	return d;
 
